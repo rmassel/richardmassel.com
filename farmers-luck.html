@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Farmer's Luck | Richard Massel (Rick Massel)</title>
+    <meta name="description" content="The story of the Chinese Farmer. Why we shouldn't judge events as good or bad too early. By Richard Massel (Rick Massel).">
+    
+    <meta property="og:title" content="The Farmer's Luck">
+    <meta property="og:description" content="A short story about perspective, setbacks, and not judging the outcome too early.">
+    <meta property="og:image" content="https://richardmassel.com/richard-massel-profile.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-dark: #0B1120; 
+            --accent: #3B82F6;
+            --bg: #fdfdfd;
+            --text: #333;
+            --footer-text: #94A3B8;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: radial-gradient(circle at top right, #1e293b 0%, #0B1120 60%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            margin: 0;
+            color: white;
+        }
+
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .nav-back:hover { color: var(--accent); }
+
+        /* --- STORY LAYOUT --- */
+        main {
+            max-width: 700px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+            flex: 1; 
+        }
+
+        .story-content {
+            font-size: 1.2rem;
+            color: #475569;
+        }
+        
+        .story-content p { margin-bottom: 1.5rem; }
+
+        .moral {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            font-weight: 600;
+            color: var(--brand-dark);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0B1120; 
+            color: var(--footer-text);
+            text-align: center;
+            padding: 3rem 1rem;
+            font-size: 1rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        .footer-name {
+            font-size: 1.2rem;
+            color: #F8FAFC; 
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-title {
+            font-size: 1rem;
+            color: #64748B;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover { color: var(--accent); }
+        
+        .copyright {
+            font-size: 0.85rem;
+            color: #475569;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="RichardMassel.html" class="nav-back">&larr; Return to Richard Massel</a>
+        <h1>The Farmer's Luck</h1>
+    </header>
+
+    <main>
+        <div class="story-content">
+            <p>Once upon a time, there was a farmer whose horse ran away.</p>
+            
+            <p>That evening, all of his neighbors came around to commiserate. They said, "We are so sorry to hear your horse has run away. This is most unfortunate."</p>
+            
+            <p>The farmer said, <strong>"Maybe."</strong></p>
+            
+            <p>The next day, the horse came back bringing seven wild horses with it. Everyone came back and said, "Oh, isn't that lucky. What a great turn of events. You now have eight horses!"</p>
+
+            <p>The farmer again said, <strong>"Maybe."</strong></p>
+            
+            <p>The following day, his son tried to break one of the horses, and while riding it, he was thrown and broke his leg. The neighbors then said, "Oh dear, that's too bad."</p>
+            
+            <p>The farmer responded, <strong>"Maybe."</strong></p>
+            
+            <p>The next day, the conscription officers came around to conscript people into the army, and they rejected his son because he had a broken leg. Again all the neighbors came around and said, "Isn't that great!"</p>
+            
+            <p>The farmer said, <strong>"Maybe."</strong></p>
+
+            <div class="moral">
+                <p>We never really know if an event is good or bad. We only know what it feels like in the moment.</p>
+                <p>Losing a job or getting a rejection might feel like a disaster today, but it could be the very thing that saves you tomorrow. Don't judge the story before it is over.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-name">Richard Massel (Rick Massel)</div>
+        <div class="footer-title">Educator | Executive | Strategist</div>
+        
+        <div class="footer-links">
+            <a href="RichardMassel.html">Home</a> &bull; 
+            <a href="https://rmassel.com">The Book</a> &bull; 
+            <a href="https://www.linkedin.com/in/rickmassel/">LinkedIn</a>
+        </div>
+        
+        <div class="copyright">
+            &copy; <span id="year"></span> Richard Massel (Rick Massel). All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

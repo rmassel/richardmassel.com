@@ -1,254 +1,53 @@
+---
+title: "Strategic Parables | Richard Massel"
+description: "Short lessons on navigating transitions and building endurance by Rick Massel."
+redirect_from: "/stories.html"
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategic Parables | Richard Massel (Rick Massel)</title>
-    <meta name="description" content="A collection of short stories and parables on leadership, endurance, and perspective by Richard Massel (Rick Massel).">
-    
-    <meta property="og:title" content="Strategic Parables | Richard Massel (Rick Massel)">
-    <meta property="og:description" content="Short lessons on navigating transitions, building endurance, and finding your own success.">
-    <meta property="og:image" content="https://richardmassel.com/richard-massel-profile.jpg">
-
+    {% seo %}
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
     <style>
-        :root {
-            /* Matched to RichardMassel.html Theme */
-            --brand-dark: #0B1120; 
-            --accent: #3B82F6;
-            --bg: #fdfdfd;
-            --text: #333;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--bg);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* --- HEADER (Matches Executive Bio) --- */
-        header {
-            background: radial-gradient(circle at top right, #1e293b 0%, #0B1120 60%);
-            color: white;
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-
-        h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            margin-top: 0;
-            color: white;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: #94A3B8;
-            max-width: 600px;
-            margin: 0 auto 1.5rem auto;
-        }
-
-        /* Navigation / Links inside Header */
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            border: 1px solid #334155;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            display: inline-block;
-            background: rgba(255,255,255,0.05);
-        }
-
-        .social-links a:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: white;
-        }
-
-        /* --- MAIN GRID LAYOUT --- */
-        main {
-            max-width: 1000px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-            flex: 1;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        /* --- LIGHT THEME CARDS --- */
-        .story-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 30px;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-
-        .story-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .story-card h2 {
-            font-family: 'Merriweather', serif;
-            color: var(--brand-dark);
-            font-size: 1.4rem;
-            margin: 0 0 10px 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .story-card p {
-            color: #475569;
-            font-size: 1rem;
-            margin: 0 0 20px 0;
-            flex-grow: 1;
-        }
-
-        .read-more {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-        }
-
-        .story-card:hover .read-more {
-            text-decoration: underline;
-        }
-
-        /* --- FOOTER (Matches Executive Bio) --- */
-        footer {
-            background: var(--brand-dark);
-            text-align: center;
-            padding: 3rem 1rem;
-            font-size: 0.9rem;
-            color: #94A3B8;
-            margin-top: 4rem;
-        }
-
-        footer a { color: white; text-decoration: none; }
-        footer a:hover { color: var(--accent); }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .social-links a { display: block; margin: 10px auto; width: 200px; }
-        }
+        :root { --brand-dark: #0B1120; --accent: #3B82F6; --bg: #fdfdfd; --text: #333; --card-bg: #ffffff; --border-color: #e2e8f0; }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: radial-gradient(circle at top right, #1e293b 0%, #0B1120 60%); color: white; padding: 4rem 1rem; text-align: center; }
+        h1 { font-family: 'Merriweather', serif; font-size: 2.5rem; margin: 0; color: white; }
+        .social-links a { color: white; text-decoration: none; margin: 0 10px; border: 1px solid #334155; padding: 8px 16px; border-radius: 4px; transition: all 0.3s ease; font-size: 0.9rem; display: inline-block; background: rgba(255,255,255,0.05); }
+        main { max-width: 1000px; margin: 3rem auto; padding: 0 1.5rem; flex: 1; width: 100%; box-sizing: border-box; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .story-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 30px; text-decoration: none; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .story-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+        .story-card h2 { font-family: 'Merriweather', serif; color: var(--brand-dark); font-size: 1.4rem; margin: 0 0 10px 0; }
+        .story-card p { color: #475569; font-size: 1rem; flex-grow: 1; }
+        footer { background: var(--brand-dark); text-align: center; padding: 3rem 1rem; font-size: 0.9rem; color: #94A3B8; margin-top: 4rem; }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Strategic Parables</h1>
-        <div class="subtitle">Short lessons on navigating transitions, building endurance, and shifting your perspective. By Richard Massel (Rick Massel).</div>
-        
         <div class="social-links">
-            <a href="https://richardmassel.com">&larr; Back to Executive Bio</a>
+            <a href="/">&larr; Back to Executive Bio</a>
             <a href="https://rmassel.com">Visit Author Site</a>
         </div>
     </header>
-
     <main>
         <div class="grid-container">
-            
-            <a href="black-dot.html" class="story-card">
-                <h2>The Black Dot</h2>
-                <p>A short story about focus, failure, and why we are wired to obsess over the error while missing the white space.</p>
-                <span class="read-more">Read Story &rarr;</span>
-            </a>
-
-            <a href="farmers-luck.html" class="story-card">
-                <h2>The Farmer's Luck</h2>
-                <p>A lesson in perspective. Why a devastating setback today might just be the exact thing that saves you tomorrow.</p>
-                <span class="read-more">Read Story &rarr;</span>
-            </a>
-
-            <a href="the-cafeteria.html" class="story-card">
-                <h2>The Cafeteria</h2>
-                <p>A reminder that success is never brought to your table. You have to get up, grab a tray, and get it yourself.</p>
-                <span class="read-more">Read Story &rarr;</span>
-            </a>
-
-            <a href="elephant-rope.html" class="story-card">
-                <h2>The Elephant Rope</h2>
-                <p>A look at conditioning and imaginary limits. Why we let old beliefs hold us back from breaking free.</p>
-                <span class="read-more">Read Story &rarr;</span>
-            </a>
-
-            <a href="the-stonecutter.html" class="story-card">
-                <h2>The Stonecutter</h2>
-                <p>When you see no results, keep swinging the hammer. A parable about endurance, compounding effort, and patience.</p>
-                <span class="read-more">Read Story &rarr;</span>
-            </a>
-
-            <a href="empty-or-full.html" class="story-card">
-                <h2>Empty or Full?</h2>
-                <p>It's not the weight of the stress that breaks you; it's the duration. Why you have to learn to put the glass down.</p>
-                <span class="read-more">Read Story &rarr;</span>
-            </a>
-
-            <a href="two-wolves.html" class="story-card">
-                <h2>The Two Wolves</h2>
-                <p>An internal battle between fear and hope. The mindset that ultimately dictates your future is the one you feed.</p>
-                <span class="read-more">Read Story &rarr;</span>
-            </a>
-
-            <a href="the-starfish.html" class="story-card">
-                <h2>The Starfish</h2>
-                <p>Overwhelmed by the scale of a problem? Shrink the world and focus on making a difference on a micro-scale.</p>
-                <span class="read-more">Read Story &rarr;</span>
-            </a>
-
-            <a href="bridges-and-walls.html" class="story-card">
-                <h2>Bridges and Walls</h2>
-                <p>During a difficult transition, the natural instinct is isolation. A story about choosing collaboration over retreat.</p>
-                <span class="read-more">Read Story &rarr;</span>
-            </a>
-
-            <a href="mexican-fisherman.html" class="story-card">
-                <h2>The Mexican Fisherman</h2>
-                <p>A challenge to "hustle culture." Why you must define your own version of happiness instead of waiting to retire.</p>
-                <span class="read-more">Read Story &rarr;</span>
-            </a>
-
+            <a href="/black-dot/" class="story-card"><h2>The Black Dot</h2><p>Why we obsess over the error while missing the white space.</p></a>
+            <a href="/farmers-luck/" class="story-card"><h2>The Farmer's Luck</h2><p>Why a setback today might save you tomorrow.</p></a>
+            <a href="/the-cafeteria/" class="story-card"><h2>The Cafeteria</h2><p>Success is never brought to your table. You have to get it yourself.</p></a>
+            <a href="/the-stonecutter/" class="story-card"><h2>The Stonecutter</h2><p>Keep swinging the hammer, even when you see no results.</p></a>
+            <a href="/empty-or-full/" class="story-card"><h2>Empty or Full?</h2><p>It is not the weight that breaks you; it's the duration.</p></a>
+            <a href="/two-wolves/" class="story-card"><h2>The Two Wolves</h2><p>The mindset that wins is the one you feed.</p></a>
+            <a href="/the-starfish/" class="story-card"><h2>The Starfish</h2><p>Focus on making a difference on a micro-scale.</p></a>
+            <a href="/mexican-fisherman/" class="story-card"><h2>The Mexican Fisherman</h2><p>Define your own version of happiness.</p></a>
         </div>
     </main>
-
     <footer>
-        <p>&copy; <span id="year"></span> Richard Massel (Rick Massel). All rights reserved.</p>
-        <p>Looking for the author site? Visit <a href="https://rmassel.com">RMassel.com</a></p>
+        <p>&copy; <span id="year"></span> Richard Massel. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
-

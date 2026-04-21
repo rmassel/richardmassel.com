@@ -1,6 +1,6 @@
 ---
 title: "The Black Dot | Richard Massel"
-description: "The story of the Black Dot. Why we focus on the error and miss the white space."
+description: "A short story about focus, failure, and why we are wired to obsess over the error while missing the white space."
 redirect_from: "/black-dot.html"
 ---
 <!DOCTYPE html>
@@ -11,7 +11,26 @@ redirect_from: "/black-dot.html"
     {% seo %}
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* (Keep your specific .paper-visual-container and .dot CSS here) */
+        :root { --brand-dark: #0B1120; --accent: #3B82F6; --bg: #fdfdfd; --text: #333; --footer-text: #94A3B8; }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.8; color: var(--text); background: var(--bg); margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: radial-gradient(circle at top right, #1e293b 0%, #0B1120 60%); color: white; padding: 3rem 1rem; text-align: center; }
+        h1 { font-family: 'Merriweather', serif; font-size: 2.5rem; margin: 0; color: white; }
+        .nav-back { display: inline-block; margin-bottom: 1rem; color: #94A3B8; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; transition: color 0.3s; }
+        .nav-back:hover { color: var(--accent); }
+        main { max-width: 700px; margin: 4rem auto; padding: 0 1.5rem; flex: 1; }
+        .story-content { font-size: 1.2rem; color: #475569; }
+        .story-content p { margin-bottom: 1.5rem; }
+        .paper-visual-container { display: flex; justify-content: center; margin: 3rem 0; }
+        .paper-visual { width: 300px; height: 400px; background: white; border: 1px solid #e2e8f0; box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1); position: relative; display: flex; align-items: center; justify-content: center; transform: rotate(-2deg); transition: transform 0.3s ease; }
+        .paper-visual:hover { transform: rotate(0deg) scale(1.02); }
+        .dot { width: 8px; height: 8px; background-color: black; border-radius: 50%; }
+        .moral { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; font-weight: 600; color: var(--brand-dark); }
+        footer { background-color: #0B1120; color: var(--footer-text); text-align: center; padding: 3rem 1rem; font-size: 1rem; border-top: 1px solid #1e293b; }
+        .footer-name { font-size: 1.2rem; color: #F8FAFC; margin-bottom: 0.5rem; }
+        .footer-links { margin-bottom: 2rem; font-weight: 600; }
+        .footer-links a { color: white; text-decoration: none; margin: 0 8px; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--accent); }
+        .copyright { font-size: 0.85rem; color: #475569; }
     </style>
 </head>
 <body>
@@ -21,14 +40,25 @@ redirect_from: "/black-dot.html"
     </header>
     <main>
         <div class="story-content">
-            <p>"Everyone focused on the black dot, but no one wrote about the white space."</p>
+            <p>One day, a university professor entered the lecture hall and announced a surprise test...</p>
+            <div class="paper-visual-container">
+                <div class="paper-visual" title="A representation of the black dot test"><div class="dot"></div></div>
+            </div>
+            <p><strong>"Everyone focused on the black dot, but no one wrote about the white space."</strong></p>
             <div class="moral">
                 <p>The black dot is small. The white space is infinite. Focus on the possibilities, not the error.</p>
             </div>
         </div>
     </main>
     <footer>
-        <div class="footer-links"><a href="/">Home</a> &bull; <a href="https://rmassel.com">The Book</a></div>
+        <div class="footer-name">Richard Massel</div>
+        <div class="footer-links">
+            <a href="/">Home</a> &bull; 
+            <a href="https://rmassel.com">The Book</a> &bull; 
+            <a href="https://www.linkedin.com/in/rickmassel/">LinkedIn</a>
+        </div>
+        <div class="copyright">&copy; <span id="year"></span> Richard Massel. All rights reserved.</div>
     </footer>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

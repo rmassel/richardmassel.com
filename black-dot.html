@@ -1,219 +1,34 @@
+---
+title: "The Black Dot | Richard Massel"
+description: "The story of the Black Dot. Why we focus on the error and miss the white space."
+redirect_from: "/black-dot.html"
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Black Dot | Richard Massel (Rick Massel)</title>
-    <meta name="description" content="The story of the Black Dot. Why we focus on the error and miss the white space. By Richard Massel (Rick Massel).">
-    
-    <meta property="og:title" content="Stop Staring at the Black Dot">
-    <meta property="og:description" content="A short story about focus, failure, and seeing the white space.">
-    <meta property="og:image" content="https://richardmassel.com/richard-massel-profile.jpg">
-
+    {% seo %}
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
     <style>
-        :root {
-            --brand-dark: #0B1120; 
-            --accent: #3B82F6;
-            --bg: #fdfdfd;
-            --text: #333;
-            --footer-text: #94A3B8;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.8;
-            color: var(--text);
-            background: var(--bg);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* --- HEADER --- */
-        header {
-            background: radial-gradient(circle at top right, #1e293b 0%, #0B1120 60%);
-            color: white;
-            padding: 3rem 1rem;
-            text-align: center;
-        }
-
-        h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 2.5rem;
-            margin: 0;
-            color: white;
-        }
-
-        .nav-back {
-            display: inline-block;
-            margin-bottom: 1rem;
-            color: #94A3B8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-        .nav-back:hover { color: var(--accent); }
-
-        /* --- STORY LAYOUT --- */
-        main {
-            max-width: 700px;
-            margin: 4rem auto;
-            padding: 0 1.5rem;
-            flex: 1; 
-        }
-
-        .story-content {
-            font-size: 1.2rem;
-            color: #475569;
-        }
-        
-        .story-content p { margin-bottom: 1.5rem; }
-
-        /* --- THE BLACK DOT VISUAL (CSS) --- */
-        .paper-visual-container {
-            display: flex;
-            justify-content: center;
-            margin: 3rem 0;
-        }
-
-        .paper-visual {
-            width: 300px;
-            height: 400px; 
-            background: white;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transform: rotate(-2deg);
-            transition: transform 0.3s ease;
-        }
-        
-        .paper-visual:hover {
-            transform: rotate(0deg) scale(1.02);
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            background-color: black;
-            border-radius: 50%;
-        }
-
-        .moral {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #e2e8f0;
-            font-weight: 600;
-            color: var(--brand-dark);
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #0B1120; 
-            color: var(--footer-text);
-            text-align: center;
-            padding: 3rem 1rem;
-            font-size: 1rem;
-            border-top: 1px solid #1e293b;
-        }
-
-        .footer-name {
-            font-size: 1.2rem;
-            color: #F8FAFC; 
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-title {
-            font-size: 1rem;
-            color: #64748B;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-links {
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-            transition: color 0.2s;
-        }
-        
-        .footer-links a:hover { color: var(--accent); }
-        
-        .copyright {
-            font-size: 0.85rem;
-            color: #475569;
-        }
-
+        /* (Keep your specific .paper-visual-container and .dot CSS here) */
     </style>
 </head>
 <body>
-
     <header>
-        <a href="https://richardmassel.com" class="nav-back">&larr; Return to Richard Massel</a>
+        <a href="/" class="nav-back">&larr; Return to Richard Massel</a>
         <h1>The Black Dot</h1>
     </header>
-
     <main>
         <div class="story-content">
-            <p>One day, a university professor entered the lecture hall and announced a surprise test. The students, naturally anxious, cleared their desks and waited.</p>
-            
-            <p>The professor walked down the aisles, handing out the exams face down. "You may begin," he said.</p>
-            
-            <p>When the students turned the paper over, there were no questions. No multiple choice. No essay prompts. The paper was completely white, except for a single, small <strong>black dot</strong> in the very center.</p>
-
-            <div class="paper-visual-container">
-                <div class="paper-visual" title="A representation of the black dot test">
-                    <div class="dot"></div>
-                </div>
-            </div>
-            
-            <p>The professor saw their confusion. "I want you to write about what you see," he instructed.</p>
-            
-            <p>The students began to write. At the end of the hour, the professor collected the papers and started reading them aloud. Without exception, every single student had focused on the dot. They described its position. They measured its diameter. They speculated on the darkness of the ink.</p>
-            
-            <p>The professor smiled. "I am not going to grade you on this," he said. "I just wanted to give you something to think about."</p>
-            
-            <p><strong>"Everyone focused on the black dot, but no one wrote about the white space."</strong></p>
-
+            <p>"Everyone focused on the black dot, but no one wrote about the white space."</p>
             <div class="moral">
-                <p>In our lives and careers, we are wired to focus on the black dots—the rejections, the errors, and the setbacks. We obsess over the one thing that went wrong.</p>
-                <p>But the black dot is small. The white space is infinite. Focus on the possibilities, not the error.</p>
+                <p>The black dot is small. The white space is infinite. Focus on the possibilities, not the error.</p>
             </div>
         </div>
     </main>
-
     <footer>
-        <div class="footer-name">Richard Massel (Rick Massel)</div>
-        <div class="footer-title">Educator | Executive | Strategist</div>
-        
-        <div class="footer-links">
-            <a href="https://richardmassel.com">Home</a> &bull; 
-            <a href="https://rmassel.com">The Book</a> &bull; 
-            <a href="https://www.linkedin.com/in/rickmassel/">LinkedIn</a>
-        </div>
-        
-        <div class="copyright">
-            &copy; <span id="year"></span> Richard Massel (Rick Massel). All rights reserved.
-        </div>
+        <div class="footer-links"><a href="/">Home</a> &bull; <a href="https://rmassel.com">The Book</a></div>
     </footer>
-
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
 </body>
-
 </html>

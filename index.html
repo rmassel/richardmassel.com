@@ -1,277 +1,79 @@
+---
+title: "Richard Massel | Educator, Executive & Strategist"
+description: "Richard (Rick) Massel is a strategic executive and author bridging the gap between institutional leadership and digital innovation."
+redirect_from: "/index.html"
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Massel (Rick Massel) | Educator, Executive & Strategist</title>
-    <meta name="description" content="Richard Massel (Rick Massel) is a former NYC Principal (Monroe Academy) and current SaaS executive specializing in digital transformation, AI strategy, and global operations.">
-    <link rel="canonical" href="https://richardmassel.com/" />
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://richardmassel.com/">
-    <meta property="og:title" content="Richard Massel | Educator & AI Strategist">
-    <meta property="og:description" content="Bridging the gap between institutional leadership and digital innovation.">
-    <meta property="og:image" content="https://richardmassel.com/richard-massel-profile.jpg">
-
+    {% seo %}
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
     <style>
         :root {
-            /* DEEP SPACE THEME to match rmassel.com */
             --brand-dark: #0B1120; 
-            --accent: #3B82F6;  /* Tech Blue */
+            --accent: #3B82F6;
             --bg: #fdfdfd;
             --text: #333;
         }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--bg);
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Hero Section */
-        header {
-            background: radial-gradient(circle at top right, #1e293b 0%, #0B1120 60%);
-            color: white;
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-
-        h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            font-weight: 300;
-            opacity: 0.9;
-            color: #94A3B8;
-        }
-
-        /* Profile Image (Headshot) */
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #3B82F6;
-            margin-top: 1rem;
-            object-fit: cover;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-
-        /* Navigation / Links */
-        .social-links {
-            margin-top: 1.5rem;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            border: 1px solid #334155;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            display: inline-block;
-            background: rgba(255,255,255,0.05);
-        }
-
-        .social-links a:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: white;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 800px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-        }
-
-        section {
-            margin-bottom: 4rem;
-        }
-
-        h2 {
-            font-family: 'Merriweather', serif;
-            color: var(--brand-dark);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.2rem;
-            border-left: 3px solid var(--accent);
-        }
-
-        /* --- FEATURE: PHOTO + TEXT LAYOUT --- */
-        .photo-text-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .feature-img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e2e8f0;
-        }
-
-        /* Desktop Layout */
-        @media (min-width: 768px) {
-            .photo-text-grid {
-                grid-template-columns: 1fr 250px; /* Text takes space, Image is fixed width */
-            }
-        }
-
-        footer {
-            background: var(--brand-dark);
-            text-align: center;
-            padding: 3rem 1rem;
-            font-size: 0.9rem;
-            color: #94A3B8;
-            margin-top: 4rem;
-        }
-
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 0; }
+        header { background: radial-gradient(circle at top right, #1e293b 0%, #0B1120 60%); color: white; padding: 4rem 1rem; text-align: center; }
+        h1 { font-family: 'Merriweather', serif; font-size: 2.5rem; margin-bottom: 0.5rem; color: white; }
+        .subtitle { font-size: 1.2rem; font-weight: 300; opacity: 0.9; color: #94A3B8; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid #3B82F6; margin-top: 1rem; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .social-links { margin-top: 1.5rem; }
+        .social-links a { color: white; text-decoration: none; margin: 0 10px; border: 1px solid #334155; padding: 8px 16px; border-radius: 4px; transition: all 0.3s ease; font-size: 0.9rem; display: inline-block; background: rgba(255,255,255,0.05); }
+        .social-links a:hover { background: var(--accent); border-color: var(--accent); color: white; }
+        main { max-width: 800px; margin: 3rem auto; padding: 0 1.5rem; }
+        section { margin-bottom: 4rem; }
+        h2 { font-family: 'Merriweather', serif; color: var(--brand-dark); border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 0; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 0.8rem; padding-left: 1.2rem; border-left: 3px solid var(--accent); }
+        .photo-text-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
+        .feature-img { width: 100%; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0; }
+        @media (min-width: 768px) { .photo-text-grid { grid-template-columns: 1fr 250px; } }
+        footer { background: var(--brand-dark); text-align: center; padding: 3rem 1rem; font-size: 0.9rem; color: #94A3B8; margin-top: 4rem; }
         footer a { color: white; text-decoration: none; }
-        footer a:hover { color: var(--accent); }
         a { color: var(--brand-dark); text-decoration: none; font-weight: 600; }
         a:hover { color: var(--accent); text-decoration: underline; }
-        
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .social-links a { display: block; margin: 10px auto; width: 200px; }
-        }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Richard Massel",
-      "alternateName": "Rick Massel",
-      "url": "https://richardmassel.com",
-      "sameAs": [
-        "https://www.linkedin.com/in/rickmassel/",
-        "https://rmassel.medium.com/",
-        "https://www.amazon.com/stores/author/B0DQ71X42L",
-        "https://www.goodreads.com/author/show/53616654.Rick_Massel",
-        "https://rmassel.com"
-      ],
-      "jobTitle": "Strategic Customer Success Manager",
-      "alumniOf": [
-        { "@type": "CollegeOrUniversity", "name": "Boston University" },
-        { "@type": "CollegeOrUniversity", "name": "Touro College" }
-      ],
-      "knowsAbout": ["Educational Leadership", "SaaS Strategy", "Digital Transformation", "AI Operations", "Endurance Athletics"]
-    }
-    </script>
 </head>
 <body>
-
     <header>
-        <img src="richard-massel-profile.jpg" alt="Richard Massel - Educator and Executive" class="profile-img">
-        
+        <img src="/richard-massel-profile.jpg" alt="Richard Massel" class="profile-img">
         <h1>Richard Massel (Rick Massel)</h1>
         <div class="subtitle">Educator | Executive | Author</div>
-        
         <div class="social-links">
             <a href="https://rmassel.com">Visit Main Author Site</a>
             <a href="https://www.linkedin.com/in/rickmassel/">LinkedIn</a>
             <a href="https://rmassel.medium.com/">Medium</a>
-            <a href="stories.html">Strategic Stories</a>
+            <a href="/stories/">Strategic Stories</a>
         </div>
     </header>
-
     <main>
         <section>
             <h2>About Richard Massel</h2>
-            <p>
-                Richard Massel (professionally known as <strong>Rick Massel</strong>) is a strategic executive with over 20 years of experience bridging the gap between institutional leadership and digital innovation. 
-            </p>
-            <p>
-                His career has evolved from leading large-scale educational operations in New York City to managing enterprise SaaS deployments for global technology firms. Today, he operates at the intersection of human systems and rapid change, helping organizations navigate complex digital transitions.
-            </p>
+            <p>Richard Massel (Rick Massel) is a strategic executive with over 20 years of experience bridging the gap between institutional leadership and digital innovation.</p>
         </section>
-
-        <section>
-            <h2>Educational Leadership & NYC Operations</h2>
-            <p>
-                Before transitioning to the technology sector, Richard spent nearly two decades with the <strong>New York City Department of Education</strong>. His tenure focused on operational turnaround, data governance, and crisis management in high-stakes environments.
-            </p>
-            <p>Key leadership roles included:</p>
-            <ul>
-                <li><strong>Principal, Monroe Academy of Visual Arts & Design:</strong> Led academic and operational strategy for an inner-city high school, managing a budget of over $4.1M and overseeing a staff of 60+.</li>
-                <li><strong>System-Wide Data Architecture:</strong> While serving as Principal, Richard simultaneously architected regional data operations tracking <strong>350,000+ users across 450 sites</strong>, ensuring compliance and resource equity across the network.</li>
-                <li><strong>International Leadership:</strong> Following his time in NYC, Richard served as a school director in <strong>Angola, India, and China</strong>, managing American curriculum implementation in diverse cultural contexts.</li>
-            </ul>
-        </section>
-        
         <section>
             <h2>Global Perspective & Endurance</h2>
             <div class="photo-text-grid">
                 <div>
-                    <p>
-                        Richard's leadership philosophy is heavily influenced by his experiences as an endurance athlete and global traveler. He believes that navigating complex business transitions requires the same resilience as navigating difficult terrain.
-                    </p>
+                    <p>Richard's leadership philosophy is heavily influenced by his experiences as an endurance athlete and global traveler.</p>
                     <ul>
-                        <li><strong>Expedition Travel:</strong> Has visited over <strong>60 countries</strong>, gaining a first-hand perspective on global economic and educational systems.</li>
-                        <li><strong>Endurance Athletics:</strong> An avid cyclist and trekker, Richard has successfully <strong>summited Mount Kilimanjaro</strong> and completed extensive treks through the <strong>Himalayas</strong>.</li>
+                        <li><strong>Expedition Travel:</strong> Has visited over 60 countries.</li>
+                        <li><strong>Endurance Athletics:</strong> Summited Mount Kilimanjaro and trekked the Himalayas.</li>
                     </ul>
                 </div>
-                
-                <img src="Rick-Massel-Richard-Massel-Kilimanjaro.jpg" alt="Richard Massel (Rick Massel) climbing Mount Kilimanjaro" class="feature-img">
+                <img src="/Rick-Massel-Richard-Massel-Kilimanjaro.jpg" alt="Richard Massel on Kilimanjaro" class="feature-img">
             </div>
         </section>
-
-        <section>
-            <h2>Current Focus: Strategy & Authorship</h2>
-            <p>
-                Currently, Richard applies his background in human systems to help organizations and individuals navigate complex transitions. He is the author of two books: <em>The Rear Guard</em> and <em>The Future is Fiction</em>.
-            </p>
-            <p>
-                While one explores the deeply personal crucible of career burnout alongside the grueling test of military basic training, and the other tackles the technological upheaval of artificial intelligence, both books share a core teaching method: the use of strategic parables. By translating high-stakes challenges into accessible narratives, Richard equips readers with the mental frameworks they need to hold the line, adapt, and lead through periods of massive uncertainty.
-            </p>
-            <p>
-                He is a regular contributor to <strong>Activated Thinker</strong>, <strong>Illumination</strong>, <strong>Data Driven Investor</strong>, and <strong>Towards AI</strong>, where he writes about strategy, career survival, and the practical application of forward-thinking frameworks.
-            </p>
-        </section>
-
-        <section>
-            <h2>Education</h2>
-            <ul>
-                <li><strong>M.S. School Administration & Supervision</strong> – Touro College, Graduate School of Education and Psychology</li>
-                <li><strong>B.A. History</strong> – Boston University, College of Arts and Sciences</li>
-            </ul>
-        </section>
     </main>
-
     <footer>
-        <p>&copy; <span id="year"></span> Richard Massel (Rick Massel). All rights reserved.</p>
-        <p>Looking for the author site? Visit <a href="https://rmassel.com">RMassel.com</a></p>
+        <p>&copy; <span id="year"></span> Richard Massel. All rights reserved.</p>
+        <p>Visit <a href="https://rmassel.com">RMassel.com</a></p>
     </footer>
-
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

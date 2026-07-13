@@ -1,0 +1,414 @@
+---
+title: "Richard Massel | Endurance Athletics and Expedition Travel"
+description: "Visual log of international expeditions, endurance cycling, and global travel by Richard Massel."
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% seo %}
+
+    <link rel="canonical" href="https://richardmassel.com/media.html" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    
+    <style>
+        :root {
+            /* LIGHT THEME to match RichardMassel.com */
+            --brand-dark: #0B1120; 
+            --accent: #3B82F6;
+            --bg: #fdfdfd;
+            --text: #333;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: radial-gradient(circle at top right, #1e293b 0%, #0B1120 60%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+            color: white;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #94A3B8;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        /* Navigation / Links inside Header */
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            border: 1px solid #334155;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            display: inline-block;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+
+        /* --- MAIN CONTENT & INTRO --- */
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .media-intro {
+            max-width: 900px;
+            margin: 0 auto 3rem auto;
+            text-align: left;
+            font-size: 1.1rem;
+            color: #475569;
+        }
+
+        .media-intro strong {
+            color: var(--brand-dark);
+        }
+
+        /* --- GALLERY GRID & CARDS --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .gallery-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin: 0;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- IMAGE WRAPPER --- */
+        .gallery-image-wrapper {
+            width: 100%;
+            height: 300px; 
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background-color: #f1f5f9;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gallery-image-wrapper::after {
+            content: '🔍 Zoom';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(11, 17, 32, 0.8);
+            color: white;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        
+        .gallery-image-wrapper:hover::after {
+            opacity: 1;
+        }
+
+        .gallery-image-wrapper img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            object-position: top center; 
+            display: block;
+            transition: opacity 0.2s ease;
+        }
+        
+        .gallery-image-wrapper:hover img {
+            opacity: 0.9;
+        }
+
+        /* --- CAPTIONS --- */
+        .gallery-caption {
+            color: #475569;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+        
+        .gallery-caption strong {
+            font-family: 'Merriweather', serif;
+            color: var(--brand-dark);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        /* --- LIGHTBOX POPUP MODAL STYLES --- */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 200;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(11, 17, 32, 0.95);
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+            animation: zoomIn 0.25s ease-out;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #94A3B8;
+            font-size: 40px;
+            font-weight: 300;
+            transition: color 0.2s;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .lightbox-close:hover { color: white; }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--brand-dark);
+            text-align: center;
+            padding: 3rem 1rem;
+            font-size: 0.9rem;
+            color: #94A3B8;
+            margin-top: 4rem;
+        }
+
+        footer a { color: white; text-decoration: none; }
+        footer a:hover { color: var(--accent); }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .social-links a { display: block; margin: 10px auto; width: 200px; }
+            .lightbox-close { top: 10px; right: 20px; font-size: 35px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Expeditions & Endurance</h1>
+        <div class="subtitle">A visual log of international expeditions, endurance cycling, and global travel. By Richard Massel (Rick Massel).</div>
+        
+        <div class="social-links">
+            <a href="/">&larr; Back to Executive Bio</a>
+            <a href="https://rmassel.com">Visit Author Site</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="media-intro">
+            <p>This gallery documents the athletic endurance and international travel experiences of <strong>Richard Massel</strong>. Beyond his executive career navigating digital transitions and complex human systems, Richard approaches physical environments with the same strategic resilience.</p>
+            <p>From organizing multi-day endurance cycling tours across the North American East Coast to summiting high-altitude peaks in Africa, he has explored over 60 countries. These images capture key moments from those global expeditions, long-distance century rides, and remote treks.</p>
+        </div>
+
+        <div class="grid-container">
+
+            <!-- Image 1: Cycling Close Up -->
+            <figure class="gallery-item">
+                <div class="gallery-image-wrapper">
+                    <img src="/photos/richard-massel-cycling-tour.webp" alt="Richard Massel wearing a black cycling helmet outdoors." class="clickable-img">
+                </div>
+                <figcaption class="gallery-caption">
+                    <strong>Endurance Cycling</strong>
+                    Richard Massel actively trains for and completes multi-day cycling tours and long-distance century rides along the East Coast and international routes.
+                </figcaption>
+            </figure>
+
+            <!-- Image 2: Quebec Waterfall -->
+            <figure class="gallery-item">
+                <div class="gallery-image-wrapper">
+                    <img src="/photos/richard-massel-quebec-waterfall.webp" alt="Richard Massel giving a thumbs up in front of a large waterfall." class="clickable-img">
+                </div>
+                <figcaption class="gallery-caption">
+                    <strong>Canadian Cycling Routes</strong>
+                    Richard Massel mapping out extensive cycling routes through Canada, photographed here during a severe weather ride near Montmorency Falls in Quebec.
+                </figcaption>
+            </figure>
+            
+            <!-- Image 3: Nile River Rafting -->
+            <figure class="gallery-item">
+                <div class="gallery-image-wrapper">
+                    <img src="/photos/richard-massel-nile-river-rafting.webp" alt="Richard Massel wearing a yellow helmet and holding a paddle next to a whitewater raft near the Source of the Nile." class="clickable-img">
+                </div>
+                <figcaption class="gallery-caption">
+                    <strong>The Source of the Nile</strong>
+                    Exploring diverse global environments, Richard Massel prepares for a whitewater rafting expedition near the historic Source of the Nile in Africa.
+                </figcaption>
+            </figure>
+
+            <!-- Image 4: Egypt Pyramids -->
+            <figure class="gallery-item">
+                <div class="gallery-image-wrapper">
+                    <img src="/photos/richard-massel-egypt-pyramids.webp" alt="Richard Massel standing in the desert in front of the Great Pyramid of Giza." class="clickable-img">
+                </div>
+                <figcaption class="gallery-caption">
+                    <strong>Global Travel & Exploration</strong>
+                    Having traveled to more than 60 countries, Richard Massel documents his visit to the ancient architectural marvels of the Great Pyramid of Giza in Egypt.
+                </figcaption>
+            </figure>
+
+            <!-- Image 5: Kilimanjaro Full Body -->
+            <figure class="gallery-item">
+                <div class="gallery-image-wrapper">
+                    <img src="/photos/richard-massel-kilimanjaro-trek.webp" alt="Richard Massel wearing a hiking pack with a snow-capped mountain peak behind him." class="clickable-img">
+                </div>
+                <figcaption class="gallery-caption">
+                    <strong>Trekking Mount Kilimanjaro</strong>
+                    Richard Massel crossing the demanding, varied terrain required to summit Mount Kilimanjaro, relying on physical endurance and calculated pacing.
+                </figcaption>
+            </figure>
+
+            <!-- Image 6: Kilimanjaro Selfie -->
+            <figure class="gallery-item">
+                <div class="gallery-image-wrapper">
+                    <img src="/photos/richard-massel-kilimanjaro-summit-route.webp" alt="Richard Massel posing during a high-altitude mountain climb on Kilimanjaro." class="clickable-img">
+                </div>
+                <figcaption class="gallery-caption">
+                    <strong>High-Altitude Ascents</strong>
+                    A behind-the-scenes look at the extreme high-altitude conditions Richard Massel faced during his successful ascent of Mount Kilimanjaro in Tanzania.
+                </figcaption>
+            </figure>
+
+            <!-- Image 7: Greece -->
+            <figure class="gallery-item">
+                <div class="gallery-image-wrapper">
+                    <img src="/photos/richard-massel-greece-travel.webp" alt="Richard Massel walking along historic stone fortress walls overlooking a city in Greece." class="clickable-img">
+                </div>
+                <figcaption class="gallery-caption">
+                    <strong>Historic European Architecture</strong>
+                    Richard Massel exploring ancient fortifications and European history during a trek along elevated stone fortress walls in Greece.
+                </figcaption>
+            </figure>
+
+            <!-- Image 8: Romania -->
+            <figure class="gallery-item">
+                <div class="gallery-image-wrapper">
+                    <img src="/photos/richard-massel-romania-castle.webp" alt="Richard Massel in front of Bran Castle in Romania during the winter." class="clickable-img">
+                </div>
+                <figcaption class="gallery-caption">
+                    <strong>Winter Expeditions in Romania</strong>
+                    Embracing harsh winter conditions, Richard Massel travels through Eastern Europe, pictured here outside the historic grounds of Bran Castle in Romania.
+                </figcaption>
+            </figure>
+
+        </div>
+    </main>
+
+    <!-- LIGHTBOX MODAL STRUCTURE -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="Expanded media view">
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Richard Massel (Rick Massel). All rights reserved.</p>
+        <p>Looking for the author site? Visit <a href="https://rmassel.com">RMassel.com</a></p>
+    </footer>
+
+    <!-- LIGHTBOX INTERACTION SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const closeBtn = document.querySelector(".lightbox-close");
+            const imageWrappers = document.querySelectorAll(".gallery-image-wrapper");
+
+            imageWrappers.forEach(wrapper => {
+                wrapper.addEventListener("click", function() {
+                    const img = this.querySelector(".clickable-img");
+                    lightbox.style.display = "flex";
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    document.body.style.overflow = "hidden"; 
+                });
+            });
+
+            function closeLightbox() {
+                lightbox.style.display = "none";
+                lightboxImg.src = "";
+                document.body.style.overflow = "auto"; 
+            }
+
+            closeBtn.addEventListener("click", closeLightbox);
+            lightbox.addEventListener("click", function(e) {
+                if (e.target !== lightboxImg) closeLightbox();
+            });
+            document.addEventListener("keydown", function(e) {
+                if (e.key === "Escape" && lightbox.style.display === "flex") closeLightbox();
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
